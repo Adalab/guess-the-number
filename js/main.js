@@ -16,14 +16,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById("submit").addEventListener("click", function() {
 
-        var numeroIntroducido = parseInt(document.getElementById("number").value);
+        var submitedNumber = parseInt(document.getElementById("number").value);
 
 
-        if (numeroIntroducido > getRandomNumber) {
-            cluesElement.textContent = "Pista: Demasiado alto";
+        if (isNaN(submitedNumber) || submitedNumber < 1 || submitedNumber > 100) {
+            clues.textContent = "El número debe estar entre 1 y 100";
         } else {
- 
-            cluesElement.textContent = "Pista: A saber qué has hecho, Maricarmen";
+
+            if (submitedNumber > numeroAleatorio) {
+                clues.textContent = "Pista: Demasiado alto";
+            } else if (submitedNumber < numeroAleatorio) {
+                clues.textContent = "Pista: Demasiado bajo";
+            } else {
+                clues.textContent = "¡¡¡Has ganado campeona!!!";
+            }
         }
     });
 });
