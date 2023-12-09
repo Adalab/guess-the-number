@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
             clues.textContent = "El número debe estar entre 1 y 100";
         } else {
 
-            if (submitedNumber > numeroAleatorio) {
+            if (submitedNumber > randomNumber) {
                 clues.textContent = "Pista: Demasiado alto";
-            } else if (submitedNumber < numeroAleatorio) {
+            } else if (submitedNumber < randomNumber) {
                 clues.textContent = "Pista: Demasiado bajo";
             } else {
                 clues.textContent = "¡¡¡Has ganado campeona!!!";
