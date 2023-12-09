@@ -21,13 +21,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         var submitedNumber = parseInt(document.getElementById("number").value);
 
+        attemptsNumber++;
+        attempts.textContent = "Número de intentos: " + attemptsNumber;
 
         if (isNaN(submitedNumber) || submitedNumber < 1 || submitedNumber > 100) {
             clues.textContent = "El número debe estar entre 1 y 100";
         } else {
-
-            attemptsNumber++;
-            attempts.textContent = "Número de intentos: " + attemptsNumber;
 
             if (submitedNumber > randomNumber) {
                 clues.textContent = "Pista: Demasiado alto";
