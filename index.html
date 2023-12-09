@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Evaluación Intermedia 2</title>
 </head>
 
 <body>
     <h1>Adivina el número</h1>
     <form>
-        <div>
+        <div class="input">
             <label for="number">Introduce aquí tu número:</label>
-            <input type="number" name="number" id="number" placeholder="Entre 1 y 100" class="js_imputNumber"/>
+            <input type="number" name="number" id="number" placeholder="Entre 1 y 100" class="inputNumber js_imputNumber"/>
         </div>
-        <button type="button" id="submit">Prueba</button>
+        <button type="button" id="submit" class="btn">Prueba</button>
     </form>
-    <p class="clue js_clues">Pista: Escribe el número y dale a Prueba</p>
+    <p class="clue js_clues">Pista: </p>
     <p class="attempts js_attempts">Número de intentos: </p>
 
     <script src="./js/main.js"></script>
